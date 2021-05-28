@@ -1,5 +1,6 @@
 import React from 'react'
-import Menu from './components/Menu/Manu'
+import Menu from './components/Menu/Menu'
+import './components/Menu/Menu.css'
 
 function App (){
 

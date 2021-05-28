@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.menu_main_div{
+    background-image:url("../../assets/Mask\ Group.png");
+    background-repeat: none;
+    background-size: cover;
+    width: 100vw;
+    height: 200vh;
+    margin: 0;
+    margin-top: -10px;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
