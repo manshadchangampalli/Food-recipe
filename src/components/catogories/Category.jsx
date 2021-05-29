@@ -2,11 +2,26 @@ import React,{useState} from 'react'
 import './Category.scss'
 
 function Category(props) {
-    const[category,setCategory] = useState("")
+    const[allMenus,setAllMenus]=useState(props.allDishes)
+    const[filter,setFilter]=useState([])
+    
 
     function displayTheCategory(category){
-       
-        setCategory(category)
+        
+        let filteredDish = allMenus.filter((items)=>{
+            return items.strCategory===category
+        }).map((item)=>{
+            return(
+                <div className="category-card">
+                    <img src={item.strMealThumb} alt="" />
+                    <h4>{item.strMeal}</h4>
+                    <p>Category: <span> {item.strCategory}</span></p>
+                                    
+                  </div>
+            )
+        })
+        setFilter(filteredDish)
+     
     }
 
     
@@ -28,20 +43,7 @@ function Category(props) {
                 </ul>
             </div>
             <div className="show-category">
-                {
-                    props.allDishes.map((items)=>{
-                        if(items.strCategory==category){
-                            return(
-                                <div className="category-card">
-                                    <img src={items.strMealThumb} alt="" />
-                                    <h4>{items.strMeal}</h4>
-                                    <p>Category: <span>{items.strCategory}</span></p>
-                                    
-                                </div>
-                            )
-                        }
-                    })
-                }
+               {filter}
             </div>
         </div>               
                            
