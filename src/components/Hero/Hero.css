@@ -1,0 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.hero{
+    height: 100vh;
+}
+.container-hero{
+    padding: 1.8em 9em;
+}
+.logo{
+    display: flex;
+    text-align: center;
+    margin-left: -7.2em;
+}
+.logo-c {
+    background-color: #c4c4c4;
+    border-radius: 100%;
+    padding:0.18em 0.55em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8em;
+}
+.logo-in{
+    color: rgb(169 169 164);
+}
+.logo-dot{
+    color: rgb(169 169 164);
+}
+.logo-cook{
+    color:#c4c4c4 ;
+    font-family: 'Roboto', sans-serif;
+    margin: 7px;
+    font-size: 25px;
+}
+.heading h1{
+    font-size: 4.5em;
+    width: 600px;
+    margin-top: 300px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 3px 3px 3px rgb(185, 185, 185);
+    text-align: center;
+
+}
+.food-image {
+    width: 635px;
+    height: 700px;
+    margin-left: 163px;
+    background-image: url(../../assets/food-image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-shadow: 10px 10px 5px #ffff;
+}
+.left-right{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
