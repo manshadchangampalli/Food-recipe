@@ -2,12 +2,18 @@ import React,{useState} from 'react'
 import './Category.scss'
 
 function Category(props) {
+    console.log(props.beefDishes);
+    console.log(props.category,"category")
     const[allMenus,setAllMenus]=useState(props.allDishes)
     const[filter,setFilter]=useState([])
+    const[forClass,setForClass]=useState('')
+
+    
+  
     
 
     function displayTheCategory(category){
-        
+        setForClass(category)
         let filteredDish = allMenus.filter((items)=>{
             return items.strCategory===category
         }).map((item)=>{
@@ -16,21 +22,29 @@ function Category(props) {
                     <img src={item.strMealThumb} alt="" />
                     <h4>{item.strMeal}</h4>
                     <p>Category: <span> {item.strCategory}</span></p>
-                                    
-                  </div>
+                         
+                </div>
             )
         })
         setFilter(filteredDish)
-     
+        
     }
 
     
-    let allCategory =props.category.map((items)=>{
+    
+    let allCategory = props.category.map((items)=>{
         return(
-            <li onClick={()=>displayTheCategory(items.strCategory)}>{items.strCategory}</li>
+            <li className={items.strCategory===forClass?"active":null} onClick={()=>displayTheCategory(items.strCategory)}>{items.strCategory} </li>
+
         )
     })
+
+    
    let maxNumberOfSpecial=8
+  
+
+    
+
     return (
         <div className="category">
             <div className="category-recipe-heading">
@@ -43,7 +57,22 @@ function Category(props) {
                 </ul>
             </div>
             <div className="show-category">
-               {filter}
+            
+        {
+            props.beefDishes && props.beefDishes.map(items=>{
+                return(
+                    <div className="category-card">
+                        <img src={items.strMealThumb} alt="" />
+                        <h4>{items.strMeal}</h4>
+                        <p>Category: <span> Beef</span></p>
+                             
+                    </div>
+                )
+            })
+        
+        }
+
+            {filter.length!=0 ? filter:null}        
             </div>
         </div>               
                            

@@ -4,10 +4,10 @@
 }
 .menu_main_div{
     background-image:url("../../assets/Mask\ Group.png");
-    background-repeat: none;
+    
     background-size: cover;
     width: 100%;
-    height: auto;
+    height: 300vh;
     margin: 0;
     margin-top: -10px;
 }

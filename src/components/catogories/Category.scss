@@ -14,14 +14,19 @@
                 cursor: pointer;
             }
             li:hover{
-                background-color: #b6b6b6;
+                background-color: #222222;
                 border-radius: 20px;
                 padding: 10px 27px;
+                color: white;
                 font-family: 'Roboto', sans-serif;
                 cursor: pointer;
             }
             li:active{
                 background-color: black;
+                color: white;
+            }
+            .active{
+                background-color: rgba(0, 0, 0, 0.767);
                 color: white;
             }
         }
