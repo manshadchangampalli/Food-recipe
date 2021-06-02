@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import NotFound from '../NotFound/NotFound';
 import './Category.scss'
 
 function Category(props) {
@@ -6,13 +7,14 @@ function Category(props) {
     console.log(props.category,"category")
     const[allMenus,setAllMenus]=useState(props.allDishes)
     const[filter,setFilter]=useState([])
-    const[forClass,setForClass]=useState('')
+    const[forClass,setForClass]=useState('Beef')
 
     
   
     
 
     function displayTheCategory(category){
+        props.setBeef([])
         setForClass(category)
         let filteredDish = allMenus.filter((items)=>{
             return items.strCategory===category
@@ -57,7 +59,7 @@ function Category(props) {
                 </ul>
             </div>
             <div className="show-category">
-            
+        
         {
             props.beefDishes && props.beefDishes.map(items=>{
                 return(
@@ -72,7 +74,7 @@ function Category(props) {
         
         }
 
-            {filter.length!=0 ? filter:null}        
+        {filter.length!=0 ? filter:<NotFound/>}        
             </div>
         </div>               
                            
