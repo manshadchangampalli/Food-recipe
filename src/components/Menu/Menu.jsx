@@ -53,7 +53,7 @@ function Menu(){
            
            {!loading?<Hero/> :<Loading/> }
            {!loading?<SpecialDishes card_details={menu}/> :null }
-           {!loading?<Category beefDishes={beef} setBeef={setBeef} category={category} allDishes={menu}/>:<Loading/>}
+           {!loading?<Category beefDishes={beef} setBeef={setBeef} category={category} allDishes={menu}/>:null}
         </div>
     )
 }

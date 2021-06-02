@@ -1,0 +1,19 @@
+.pagenumber{
+    background-color: gray;
+    padding: 10px 10px 10px 15px;
+    width: 15px;
+    margin: 10px;
+    border: 1px solid black;
+
+}
+.pagenumber:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
