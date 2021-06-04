@@ -7,6 +7,24 @@ function Category(props) {
   const [allMenus, setAllMenus] = useState(props.allDishes);
   const [filter, setFilter] = useState([]);
   const [forClass, setForClass] = useState("Beef");
+  const [noOfItems,setNumberOfItems] = useState(4);
+  const [pageNumber,setPageNumber] = useState(1)
+
+
+// for pagination
+
+let lastIndex =  pageNumber * noOfItems;
+
+// 1*4=4
+// 2*4=8
+
+let firstIndex = lastIndex - noOfItems;
+// 4-4=0
+// 8-4=4
+// 12-4=8
+let showTheseItmes = filter.slice(firstIndex,lastIndex)
+
+
 
   function displayTheCategory(category) {
     props.setBeef([]);
@@ -69,10 +87,10 @@ function Category(props) {
             );
           })}
 
-        {filter.length != 0 ? filter : props.beefDishes == null && <NotFound />}
+        {filter.length != 0 ? showTheseItmes  : props.beefDishes == 0 && <NotFound />}
       </div>
       <div>
-        <Pagination filter={filter} />
+        <Pagination filter={filter} pagenumber={setPageNumber} page={pageNumber} />
       </div>
     </div>
   );

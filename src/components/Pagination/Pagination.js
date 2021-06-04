@@ -1,8 +1,9 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Pagination.css'
 
 
 function Pagination(props) {
+    const [activeClass,setActiveClass] = useState(1)
     let byFour= props.filter.length/4
    
     let ceil = Math.ceil(byFour)
@@ -13,9 +14,16 @@ function Pagination(props) {
         numberOfPages.push(i)
     }
 
+    function getPageNumber(number){
+        console.log(number , "this is the number");
+        props.pagenumber(number)
+        setActiveClass(number )
+    }
+
+
     let pages = numberOfPages.map((item)=>{
         return(
-            <p className="pagenumber">{item}</p>
+            <p className={activeClass===item  ? "actives":"pagenumberdefault"} onClick={()=>getPageNumber(item)} >{item}</p>
         )
     })
     console.log(numberOfPages)
