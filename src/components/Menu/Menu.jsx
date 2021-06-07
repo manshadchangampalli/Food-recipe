@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import Category from '../catogories/Category';
 import Hero from '../Hero/Hero';
 import Loading from '../loading/Loading';
+import Popup from '../Popup/Popup';
 import SpecialDishes from '../specialDishes/SpecialDishes';
 import './Menu.css'
 
@@ -52,7 +53,7 @@ function Menu(){
         <div className="menu_main_div">
            
            {!loading?<Hero/> :<Loading/> }
-           {!loading?<SpecialDishes card_details={menu}/> :null }
+           {!loading?<SpecialDishes  card_details={menu}/> :null }
            {!loading?<Category beefDishes={beef} setBeef={setBeef} category={category} allDishes={menu}/>:null}
         </div>
     )

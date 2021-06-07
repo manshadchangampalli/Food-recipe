@@ -1,7 +1,7 @@
 .notfound{
     width: 100%;
-    height: 300px;
-    border: 10px double rgb(212, 47, 47);
+    height: 200px;
+    border: 5px solid rgb(223, 84, 20);
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -13,9 +13,9 @@
 .notfound h3{
     
     font-size: 30px;
-    color: rgb(212, 47, 47);
+    color: rgb(223, 84, 20);
     font-family: sans-serif;
-    margin-bottom: 45px;
+    margin-bottom: 20px;
 }
 .notfound h1{
     font-size: 40px;

@@ -75,7 +75,8 @@ let showTheseItmes = filter.slice(firstIndex,lastIndex)
       </div>
       <div className="show-category">
         {props.beefDishes &&
-          props.beefDishes.map((items) => {
+          props.beefDishes.map((items,index) => {
+            if(index<8){
             return (
               <div className="category-card">
                 <img src={items.strMealThumb} alt="" />
@@ -84,7 +85,7 @@ let showTheseItmes = filter.slice(firstIndex,lastIndex)
                   Category: <span> Beef</span>
                 </p>
               </div>
-            );
+            );}
           })}
 
         {filter.length != 0 ? showTheseItmes  : props.beefDishes == 0 && <NotFound />}

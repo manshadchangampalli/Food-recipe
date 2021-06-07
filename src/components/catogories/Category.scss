@@ -51,12 +51,13 @@
     flex-wrap: wrap;
     gap: 4.25em;
     .category-card{
-       background-color: rgba(0, 0, 0, 0.836);
+       background-color: rgba(204, 201, 201, 0.425);
        height: 400px;
-       color: white;
+       color: rgb(0, 0, 0);
        width: 270px;
        border-radius: 10px;
        position: relative;
+       backdrop-filter: blur(20px);
        font-family: 'Roboto', sans-serif;
        
         img{
@@ -72,14 +73,14 @@
             font-weight: 200;
         }
         h4{
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 600;
             max-width: 250;
             // margin-left: 10px;
             text-align: center;
         }
         span{
-            font-size: 20px;
+            font-size: 15px;
             font-weight: 500;
         }
 
