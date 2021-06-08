@@ -20,6 +20,7 @@
     height: 70%;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 5px 5px 15px #122455;
     display: flex;
     background-color: aliceblue;
 }
@@ -28,7 +29,6 @@
     top: 125px;
     right: 350px;
     z-index: 5;
-    
 
 }
 .close-icon svg{
@@ -37,10 +37,11 @@
     color: red;
 }
 .popup-img{
-    background-color: rgb(222, 236, 236);
+    background-color: rgb(255, 255, 255);
     width: 50%;
+    flex-direction: column;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 .popup-img img{
@@ -59,7 +60,70 @@
     padding: 10% 5%;
 }
 .popup-title{
-    max-width: 70%;
-    text-shadow: 4px 3px #122455;
-
+    width: 100%;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+.popup-title h1{
+    max-width:70% ;
+    font-size: 24px;
+    text-align: center;
+}
+.priceTag{
+    background:url('../../assets/priceTagbig.png');
+    width: 314px;
+    height: 200px;
+    position: absolute;
+    top: 495px;
+    left: 590px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 15;
+}
+.strikeprice{
+    font-size: 17px;
+    text-decoration: line-through;
+    position: absolute;
+    top: 75px;
+    left: 146px;
+    font-weight: 300;
+    color: white;
+}
+.priceByOffer{
+    font-size: 20px;
+    position: absolute;
+    top: 101px;
+    left: 140px;
+    font-weight: 300;
+    color: white;
+}
+.for-blur li{
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: white;
+    max-width: 90%;
+}
+.for-blur p{
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: white;
+    max-width: 90%;
+}
+.for-blur{
+    overflow: hidden;
+ 
+}
+.popupcontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.viewmore{
+    color: rgb(0, 47, 255);
+    font-weight: 600;
+    cursor: pointer;
+    text-shadow: 2px 2px rgb(83, 111, 235);
 }
