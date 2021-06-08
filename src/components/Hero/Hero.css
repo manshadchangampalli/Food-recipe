@@ -19,6 +19,7 @@
 .logo-c {
     background-color: #c4c4c4;
     border-radius: 100%;
+    color: #1b306b;
     padding:0.18em 0.55em;
     font-family: 'Roboto', sans-serif;
     font-size: 1.8em;
@@ -39,8 +40,8 @@
     font-size: 4.5em;
     width: 600px;
     margin-top: 300px;
+    text-shadow: 4px 3px #122455;
     font-family: 'Roboto', sans-serif;
-    text-shadow: 3px 3px 3px rgb(185, 185, 185);
     text-align: center;
 
 }

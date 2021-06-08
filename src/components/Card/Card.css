@@ -1,0 +1,48 @@
+.recipe-card{
+    width: 270px;
+    height: 350px;
+    background-color: rgba(204, 201, 201, 0.425);
+    backdrop-filter: blur(20px);   
+     color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 5px 5px 5px #122455;
+            
+}
+.recipe-card:hover{
+    transform: scale(1.05);
+    transition: all 0.4s ease-out;
+    box-shadow: 10px 10px 8px #122455;
+
+
+}
+.card-content{
+    width: 250px;
+    text-decoration: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    word-spacing: 2px;
+    overflow: hidden;
+    
+}
+
+img{
+    width: 250px;
+    background-size: cover;
+    height: 250px;
+    border-radius: 10px;    
+    margin: 10px;
+}
+.card-content{
+    margin: 10px;
+}
+.card-content p{
+    font-size: 20px;
+    font-weight: 400;
+    text-shadow: 2px 2px rgb(0 0 0);
+}

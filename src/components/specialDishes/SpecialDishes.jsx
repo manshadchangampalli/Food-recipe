@@ -1,12 +1,19 @@
 import { useState } from 'react';
+import Card from '../Card/Card';
 import Popup from '../Popup/Popup';
 import './SpecialDishes.scss'
 
-function SpecialDishes (props){
+
+function SpecialDishes (props){ 
+    const[popupDetailsState,setPopupDetailsState]=useState({})
     const[showPopup,setShowPopup ]=useState(false)
     let maxNumberOfSpecial=8;
-    function showPopupHandler(){
+    function showPopupHandler(img,title,category,area){
         setShowPopup(true)
+         
+        
+        setPopupDetailsState( {img:img,title:title,category:category,area:area} )
+        
     }
     return(
         <div className="specialdishes">
@@ -16,7 +23,9 @@ function SpecialDishes (props){
                     <h1>Special Recipes</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugiat architecto quia unde maxime alias sapiente ut quaerat. Ipsa, mollitia suscipit. Nostrum autem architecto aut animi rerum velit error iure.</p>
                 </div>
-                {showPopup && <Popup/>}
+                
+                {showPopup && <Popup  setShowPopup={setShowPopup} {...popupDetailsState} />}
+            
                 <div className="Special-card">
                 {
 
@@ -24,17 +33,9 @@ function SpecialDishes (props){
                         if(maxNumberOfSpecial>index){
                             
                             return(
-                                <a href="javascript:;" onClick={showPopupHandler}>
-                                <div className="recipe-card">
-                                <img src={items.strMealThumb} alt="" />                          
-                                <div className="card-content">
-                                <h3>{items.strMeal}</h3>
-                                <h5>Category:{items.strCategory}</h5>
-                                <p>{items.strTags}</p>
-                                </div>
-                                </div>
+                                <a href="javascript:;" onClick={()=>showPopupHandler(items.strMealThumb,items.strMeal,items.strCategory,items.strArea)}>
+                               <Card strMealThumb={items.strMealThumb} strMeal={items.strMeal} />
                                 </a>
-    
                             )
                         }
                         

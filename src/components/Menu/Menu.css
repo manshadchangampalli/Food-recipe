@@ -1,18 +1,24 @@
 *{
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+
 }
 .menu_main_div{
-    background-image:url("../../assets/Mask\ Group.png");
-    
+    background-color:#1b306b ;    
     background-size: cover;
+    color:#f1c50e ;
     width: 100%;
     min-height: 100vh;
     margin: 0;
     margin-top: -10px;
-    max-height: 300vh;
+    
 }
 body{
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
+/* #1b306b-blue f1c50e-yellow*/
+/* font-family: 'Montserrat Alternates', sans-serif; */

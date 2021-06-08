@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Card from "../Card/Card";
 import NotFound from "../NotFound/NotFound";
 import Pagination from "../Pagination/Pagination";
 import "./Category.scss";
@@ -33,15 +34,10 @@ let showTheseItmes = filter.slice(firstIndex,lastIndex)
       .filter((items) => {
         return items.strCategory === category;
       })
-      .map((item) => {
+      .map((items) => {
         return (
-          <div className="category-card">
-            <img src={item.strMealThumb} alt="" />
-            <h4>{item.strMeal}</h4>
-            <p>
-              Category: <span> {item.strCategory}</span>
-            </p>
-          </div>
+          <Card strMealThumb={items.strMealThumb} strMeal={items.strMeal} strMealThumb={items.strMealThumb} strMeal={items.strMeal} showPopupHandler={showPopupHandler}/>
+
         );
       });
     setFilter(filteredDish);
@@ -59,7 +55,9 @@ let showTheseItmes = filter.slice(firstIndex,lastIndex)
   });
 
   let maxNumberOfSpecial = 8;
+  function showPopupHandler(){
 
+  }
   return (
     <div className="category">
       <div className="category-recipe-heading">
@@ -78,13 +76,7 @@ let showTheseItmes = filter.slice(firstIndex,lastIndex)
           props.beefDishes.map((items,index) => {
             if(index<8){
             return (
-              <div className="category-card">
-                <img src={items.strMealThumb} alt="" />
-                <h4>{items.strMeal}</h4>
-                <p>
-                  Category: <span> Beef</span>
-                </p>
-              </div>
+              <Card strMealThumb={items.strMealThumb} strMeal={items.strMeal} strMealThumb={items.strMealThumb} strMeal={items.strMeal} showPopupHandler={showPopupHandler}/>
             );}
           })}
 

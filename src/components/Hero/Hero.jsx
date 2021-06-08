@@ -13,7 +13,7 @@ function Hero() {
               <h2 className='logo-cook'>COOK<span className='logo-dot'>.</span><span className='logo-in'>i</span>N</h2>
             </div>
             <div className="heading">
-              <h1>Simple And Tasty Recipes</h1>
+              <h1>SIMPLE AND TASTY RECIPES</h1>
             </div>
           </div>
           <div className="food-image">
