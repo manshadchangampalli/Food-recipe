@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Popup.css";
 import Close from "../icons/Icons";
 
 function Popup(props) {
-
+  const [viewmore,setViewmore] =useState(false)
+ 
 
 
 
@@ -19,6 +20,9 @@ function Popup(props) {
         </div>
         <div onClick={() => props.setShowPopup(false)} className="close-icon">
           <Close />
+        </div>
+        <div className="addtocartbtn">
+          <button>Add to Cart</button>
         </div>
         <div className="popup-div">
           <div className="popup-img">
@@ -37,12 +41,25 @@ function Popup(props) {
                 <li>
                   {props.title} is one of {props.category} itmes
                 </li>
-                <p>{props.desc.length<500?props.desc : props.desc.slice(0,499)+" ..." }<span className="viewmore">{props.desc.length>600&& "view more"}</span></p>
+
                 
-              </div>
+                {props.desc?<p>{props.desc.length<400?props.desc : props.desc.slice(0,399)+" ..." }
+                <span onClick={()=>setViewmore(true)} className="viewmore">{props.desc.length>600&& "view more"}</span></p>
+              :null }</div>
             </div>
           </div>
         </div>
+        {
+        viewmore && <div style={{ background: "url(" + props.img + ")" }} className="viewmorediv">
+          <div className="viewmoreconten">
+            <h1>{props.title}</h1>
+            <div className="descriptioninviewmore">
+              <p>{props.desc}</p>
+              </div>
+            <button onClick={()=>setViewmore(false)} className="btn-back-fromViewMore">Back</button>
+          </div>
+        </div>
+        }
       </div>
     </div>
   );

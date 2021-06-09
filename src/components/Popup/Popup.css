@@ -106,10 +106,13 @@
     max-width: 90%;
 }
 .for-blur p{
+    line-height: 1.4;
     font-size: 20px;
     margin-bottom: 15px;
     color: white;
     max-width: 90%;
+    letter-spacing: 1px;
+    word-spacing: 2px;
 }
 .for-blur{
     overflow: hidden;
@@ -126,4 +129,74 @@
     font-weight: 600;
     cursor: pointer;
     text-shadow: 2px 2px rgb(83, 111, 235);
+}
+.viewmorediv{
+    width: 60%;
+    height: 70%;
+    transition: all .6s ease;
+    position:absolute;
+    border-radius: 10px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 20;
+}
+.viewmoreconten{
+    background-color: rgba(0, 0, 0, 0.651);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.viewmoreconten p{
+ font-size: 18px;
+ margin: 50px 20px;
+ letter-spacing: 2px;
+ word-spacing: 2px;
+ line-height: 1.5;
+ 
+ text-align: center;
+ 
+}
+.descriptioninviewmore{
+    max-height: 80%;
+    overflow-y:auto;
+    scrollbar-color: transparant;
+}
+.viewmoreconten h1{
+    margin-top: 30px;
+}
+.btn-back-fromViewMore{
+    padding: 10px 25px;
+    background-color: black;
+    color: #fff;
+    position: absolute;
+    z-index: 40;
+    bottom: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    right: 188px;
+}
+.addtocartbtn button{
+    padding: 10px 25px;
+    background-color: #f1c50e;
+    color: #122455;
+    position: absolute;
+    z-index: 40;
+    bottom: 136px;
+    /* box-shadow: 2px 2px 3px 1px #111, -2px -2px 3px 1px #fff; */
+    border: 1px solid #122455;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 900;
+    right: 364px;
 }

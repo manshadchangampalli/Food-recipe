@@ -9,11 +9,13 @@ function SpecialDishes (props){
     const[showPopup,setShowPopup ]=useState(false)
     let maxNumberOfSpecial=8;
     function showPopupHandler(img,title,category,area,id,description){
+        let price=id/100
+        {img && title && category&&area&&id && description && 
+            setPopupDetailsState( {img:img,title:title,category:category,area:area,price:price,desc:description} )}
         setShowPopup(true)
-         let price=id/100
-        console.log(price);
-        setPopupDetailsState( {img:img,title:title,category:category,area:area,price:price,desc:description} )
+         
         
+    
     }
     return(
         <div className="specialdishes">
@@ -31,7 +33,6 @@ function SpecialDishes (props){
 
                     props.card_details.map((items,index)=>{
                         if(maxNumberOfSpecial>index){
-                            console.log(items.strInstructions, items.strIngredient1);
                             return(
                                 <a href="javascript:;"
                                  onClick={()=>
