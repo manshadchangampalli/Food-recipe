@@ -116,13 +116,11 @@
 }
 .for-blur{
     overflow: hidden;
- 
 }
 .popupcontent{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    
 }
 .viewmore{
     color: rgb(0, 47, 255);

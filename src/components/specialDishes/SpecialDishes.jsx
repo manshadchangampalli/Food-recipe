@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import Card from '../Card/Card';
 import Popup from '../Popup/Popup';
 import './SpecialDishes.scss'
+import {AllMenuContext} from '../Menu/Menu'
 
 
 function SpecialDishes (props){ 
@@ -13,10 +14,8 @@ function SpecialDishes (props){
         {img && title && category&&area&&id && description && 
             setPopupDetailsState( {img:img,title:title,category:category,area:area,price:price,desc:description} )}
         setShowPopup(true)
-         
-        
-    
     }
+    const MenusContext = useContext(AllMenuContext)
     return(
         <div className="specialdishes">
             
@@ -31,7 +30,7 @@ function SpecialDishes (props){
                 <div className="Special-card">
                 {
 
-                    props.card_details.map((items,index)=>{
+                    MenusContext.map((items,index)=>{
                         if(maxNumberOfSpecial>index){
                             return(
                                 <a href="javascript:;"

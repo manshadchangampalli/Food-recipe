@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Card from "../Card/Card";
 import NotFound from "../NotFound/NotFound";
 import Pagination from "../Pagination/Pagination";
 import Popup from "../Popup/Popup";
 import "./Category.scss";
+import {AllMenuContext} from '../Menu/Menu'
+
 
 function Category(props) {
-  const [allMenus, setAllMenus] = useState(props.allDishes);
+  const MenusContext = useContext(AllMenuContext)
+  const [allMenus, setAllMenus] = useState(MenusContext);
   const [popupDetailsState, setPopupDetailsState] = useState({});
   const [showPopup, setShowPopup] = useState(false);
   const [filter, setFilter] = useState([]);
@@ -14,6 +17,8 @@ function Category(props) {
   const [noOfItems, setNumberOfItems] = useState(4);
   const [pageNumber, setPageNumber] = useState(1);
 
+
+  
   // for pagination
 
   let lastIndex = pageNumber * noOfItems;
