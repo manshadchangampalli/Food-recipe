@@ -7,13 +7,11 @@ import SpecialDishes from "../specialDishes/SpecialDishes";
 import "./Menu.css";
 
 export const AllMenuContext = React.createContext()
-
 function Menu() {
   const [menu, setMenu] = useState([]);
   const [category, setCategory] = useState([]);
   const [beef, setBeef] = useState();
   const [loading, setLoading] = useState(false);
-
   async function getAllDatas() {
     setLoading(true);
     const API_URL = "https://www.themealdb.com/api/json/v1/1/search.php?f=c";
