@@ -1,94 +1,113 @@
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    font-family: 'Montserrat Alternates', sans-serif;
-
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Montserrat Alternates", sans-serif;
 }
-.menu_main_div{
-    background-color:#1b306b ;    
-    background-size: cover;
-    color:#f1c50e ;
-    width: 100%;
-    min-height: 100vh;
-    margin: 0;
-    margin-top: -10px;
-    
+.menu_main_div {
+  background-color: #1b306b;
+  background-size: cover;
+  color: #f1c50e;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  margin-top: -10px;
 }
-body{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 /* #1b306b-blue f1c50e-yellow*/
 /* font-family: 'Montserrat Alternates', sans-serif; */
 
-
 /* for Responsive */
 
-@media (max-width: 767px){
-    body{
-        width: 100vw;
-    
-    }
-    .logo-cook {
-        font-size: 10px;
-    }
-    .logo-c {
-        padding: 0.4rem 0.6rem;
-        font-size: .6rem;
-    }
-    .logo {
-        margin-left: 0;
-    }
-    .container-hero{
-        padding: 10px;
-    }
-    .menu_main_div{
-        margin-top: 0;
-    }
-    .left-right{
-        width: 100vw;
-    }
-    .heading h1 {
-        font-size: 4.5em;
-        width: 80%;
-        margin-top: 0rem;
-        text-align: center;
-    }
-    .heading{
-        display: grid;
-        width: 100%;
-        place-items: center;
-        height: 100vh;
-
-    }
-    .food-image{
-        display: none;
-    }
-    .container-special-recipe {
-        padding: 0 30px;
-        margin-bottom: 50px;
-    }
-    .container-special-recipe .special-recipe-heading h1{
-        font-size: 2rem;
-    }
-    .container-special-recipe .special-recipe-heading p {
-        width: 100%;
-    }
-    .Special-card{
-        align-items: center;
-        justify-content: center;
-    }
-    .category {
-        padding: 0 30px;
-    }
-    .category-recipe-heading p{
-        width: 100%;
-    }
-    .show-category{
-      justify-content: center;
-      align-items: center;
-
-    }
+@media (max-width: 767px) {
+  body {
+    width: 100vw;
+  }
+  .logo-cook {
+    font-size: 10px;
+  }
+  .logo-c {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.6rem;
+  }
+  .logo {
+    margin-left: 0;
+  }
+  .container-hero {
+    padding: 10px;
+  }
+  .menu_main_div {
+    margin-top: 0;
+  }
+  .left-right {
+    width: 100vw;
+  }
+  .heading h1 {
+    font-size: 4.5em;
+    width: 80%;
+    margin-top: 0rem;
+    text-align: center;
+  }
+  .heading {
+    display: grid;
+    width: 100%;
+    place-items: center;
+    height: 100vh;
+  }
+  .food-image {
+    display: none;
+  }
+  .container-special-recipe {
+    padding: 0 30px;
+    margin-bottom: 50px;
+  }
+  .container-special-recipe .special-recipe-heading h1 {
+    font-size: 2rem;
+  }
+  .container-special-recipe .special-recipe-heading p {
+    width: 100%;
+  }
+  .Special-card {
+    align-items: center;
+    justify-content: center;
+  }
+  .category {
+    padding: 0 30px;
+  }
+  .category-recipe-heading p {
+    width: 100%;
+  }
+  .show-category {
+    justify-content: center;
+    align-items: center;
+  }
+  .menu_main_div {
+    overflow-x: hidden;
+  }
+  .popup-div {
+    width: 90%;
+    overflow: scroll;
+    height: 90%;
+    flex-direction: column;
+  }
+  .popup-img {
+    width: 100%;
+  }
+  .popup-details {
+    width: 100%;
+  }
+  .close-icon {
+    top: 45px;
+    right: 25px;
+  }
+  .priceTag {
+    top: 215px;
+    left: -50px;
+    position: absolute;
+  }
 }

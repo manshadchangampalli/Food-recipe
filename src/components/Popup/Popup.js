@@ -14,10 +14,7 @@ function Popup(props) {
   return (
     <div className="mainPopup">
       <div className="popup">
-        <div className="priceTag">
-          <p className="strikeprice">${props.price}</p>
-          <p className="priceByOffer">${priceByOffer}</p>
-        </div>
+        
         <div onClick={() => props.setShowPopup(false)} className="close-icon">
           <Close />
         </div>
@@ -25,6 +22,10 @@ function Popup(props) {
           <button>Add to Cart</button>
         </div>
         <div className="popup-div">
+        <div className="priceTag">
+          <p className="strikeprice">${props.price}</p>
+          <p className="priceByOffer">${priceByOffer}</p>
+        </div>
           <div className="popup-img">
             <div className="popup-title">
               <h1>{props.title.toUpperCase()}</h1>
