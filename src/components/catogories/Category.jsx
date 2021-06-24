@@ -4,7 +4,7 @@ import NotFound from "../NotFound/NotFound";
 import Pagination from "../Pagination/Pagination";
 import Popup from "../Popup/Popup";
 import "./Category.scss";
-import {AllMenuContext} from '../Menu/Menu'
+import {AllMenuContext} from "../Context"
 
 
 function Category(props) {

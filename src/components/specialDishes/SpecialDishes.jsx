@@ -2,8 +2,7 @@ import { useContext, useState } from 'react';
 import Card from '../Card/Card';
 import Popup from '../Popup/Popup';
 import './SpecialDishes.scss'
-import {AllMenuContext} from '../Menu/Menu'
-
+import {AllMenuContext} from '../Context'
 
 function SpecialDishes (props){ 
     const[popupDetailsState,setPopupDetailsState]=useState({})

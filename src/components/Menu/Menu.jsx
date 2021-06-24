@@ -1,25 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Category from "../catogories/Category";
 import Hero from "../Hero/Hero";
-import Loading from "../loading/Loading";
 import Popup from "../Popup/Popup";
 import SpecialDishes from "../specialDishes/SpecialDishes";
 import "./Menu.css";
+import Context from "../Context";
 
-export const AllMenuContext = React.createContext()
 function Menu() {
-  const [menu, setMenu] = useState([]);
   const [category, setCategory] = useState([]);
   const [beef, setBeef] = useState();
-  const [loading, setLoading] = useState(false);
-  async function getAllDatas() {
-    setLoading(true);
-    const API_URL = "https://www.themealdb.com/api/json/v1/1/search.php?f=c";
-    let response = await fetch(API_URL);
-    let data = await response.json();
-    setMenu(data.meals);
-    setLoading(false);
-  }
 
   async function getAllCategory() {
     const API_URL = "https://www.themealdb.com/api/json/v1/1/categories.php";
@@ -37,23 +26,16 @@ function Menu() {
   }
 
   useEffect(() => {
-    getAllDatas();
     getAllCategory();
     getBeefCategory();
   }, []);
   return (
     <div className="menu_main_div">
-      {!loading ? <Hero /> : <Loading />}
-      <AllMenuContext.Provider value={menu}>
-        {!loading ? <SpecialDishes  /> : null}
-        {!loading ? (
-          <Category
-            beefDishes={beef}
-            setBeef={setBeef}
-            category={category}
-          />
-        ) : null}
-      </AllMenuContext.Provider>
+    <Context>
+      <Hero />
+        <SpecialDishes />
+        <Category beefDishes={beef} setBeef={setBeef} category={category} />
+      </Context>
     </div>
   );
 }
