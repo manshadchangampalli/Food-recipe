@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Card from "../Card/Card";
 import NotFound from "../NotFound/NotFound";
 import Pagination from "../Pagination/Pagination";
@@ -7,7 +7,7 @@ import "./Category.scss";
 import {AllMenuContext} from "../Context"
 
 
-function Category(props) {
+function Category() {
   const MenusContext = useContext(AllMenuContext)
   const [allMenus, setAllMenus] = useState(MenusContext);
   const [popupDetailsState, setPopupDetailsState] = useState({});
@@ -16,6 +16,34 @@ function Category(props) {
   const [forClass, setForClass] = useState("Beef");
   const [noOfItems, setNumberOfItems] = useState(4);
   const [pageNumber, setPageNumber] = useState(1);
+  const [category, setCategory] = useState([]);
+  const [beef, setBeef] = useState();
+
+
+
+
+
+  
+  async function getAllCategory() {
+    const API_URL = "https://www.themealdb.com/api/json/v1/1/categories.php";
+
+    let response = await fetch(API_URL);
+    let categoryData = await response.json();
+    setCategory(categoryData.categories);
+  }
+
+  async function getBeefCategory() {
+    const API_URL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef";
+    let response = await fetch(API_URL);
+    let beefData = await response.json();
+    setBeef(beefData.meals);
+  }
+
+  useEffect(() => {
+    getAllCategory();
+    getBeefCategory();
+  }, []);
+
 
 
   
@@ -49,7 +77,7 @@ function Category(props) {
   }
 
   function displayTheCategory(category) {
-    props.setBeef([]);
+    setBeef([]);
     setForClass(category);
     let filteredDish = allMenus
       .filter((items) => {
@@ -84,7 +112,7 @@ function Category(props) {
     setFilter(filteredDish);
   }
 
-  let allCategory = props.category.map((items) => {
+  let allCategory =category.map((items) => {
     return (
       <li
         className={items.strCategory === forClass ? "active" : null}
@@ -114,8 +142,8 @@ function Category(props) {
         <ul>{allCategory}</ul>
       </div>
       <div className="show-category">
-        {props.beefDishes &&
-          props.beefDishes.map((items, index) => {
+        {beef &&
+          beef.map((items, index) => {
             if (index < 8) {
               return (
                 <a
@@ -145,7 +173,7 @@ function Category(props) {
 
         {filter.length != 0
           ? showTheseItmes
-          : props.beefDishes == 0 && <NotFound />}
+          : beef == 0 && <NotFound />}
       </div>
       <div>
         <Pagination

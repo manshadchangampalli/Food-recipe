@@ -23,7 +23,9 @@ function Pagination(props) {
 
     let pages = numberOfPages.map((item)=>{
         return(
-            <p className={activeClass===item  ? "actives":"pagenumberdefault"} onClick={()=>getPageNumber(item)} >{item}</p>
+            <div className={activeClass===item  ? "actives-page-count":"page-count"}onClick={()=>getPageNumber(item)}>
+            <p className="pagenumberdefault" >{item}</p>
+            </div>
         )
     })
     console.log(numberOfPages)

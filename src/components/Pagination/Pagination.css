@@ -1,28 +1,30 @@
-.pagenumberdefault{
-    background-color: gray;
-    padding: 10px 10px 10px 15px;
-    width: 15px;
-    margin: 10px;
-    color: #fff;
-    border: 1px solid black;
-
+.pagenumberdefault {
+  color: #fff;
 }
-.pagenumberdefault:hover{
-    background-color: black;
-    color: white;
-    cursor:pointer;
+.page-count {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  margin: 10px;
+  height: 40px;
+  background-color: gray;
 }
-.pagination{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
+.actives-page-count {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  margin: 10px;
+  height: 40px;
+  background-color: black;
 }
-.actives{
-    background-color: black;
-    color: white;
-    padding: 10px 10px 10px 15px;
-    width: 15px;
-    margin: 10px;
-    border: 1px solid black;
+.page-count:hover {
+  background-color: rgb(49, 49, 49);
+  color: white;
+  cursor: pointer;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }

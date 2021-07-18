@@ -77,12 +77,13 @@
     width: 314px;
     height: 200px;
     position: absolute;
-    top: 495px;
-    left: 590px;
+    top: 386px;
+    left: 274px;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 15;
 }
+
 .strikeprice{
     font-size: 17px;
     text-decoration: line-through;
