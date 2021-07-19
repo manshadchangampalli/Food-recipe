@@ -3,6 +3,7 @@ import Card from '../Card/Card';
 import Popup from '../Popup/Popup';
 import './SpecialDishes.scss'
 import {AllMenuContext} from '../Context'
+import Cart from '../Cart/Cart';
 
 function SpecialDishes (props){ 
     const[popupDetailsState,setPopupDetailsState]=useState({})
@@ -25,7 +26,9 @@ function SpecialDishes (props){
                 </div>
                 
                 {showPopup && <Popup  setShowPopup={setShowPopup} {...popupDetailsState} />}
-            
+                <div className="cart-icon">
+                    <Cart/>
+                </div>
                 <div className="Special-card">
                 {
 

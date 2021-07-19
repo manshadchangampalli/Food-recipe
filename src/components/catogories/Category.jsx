@@ -112,7 +112,7 @@ function Category() {
     setFilter(filteredDish);
   }
 
-  let allCategory =category.map((items) => {
+  let allCategory =category.map((items) => { 
     return (
       <li
         className={items.strCategory === forClass ? "active" : null}

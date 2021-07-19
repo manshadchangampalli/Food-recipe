@@ -8,6 +8,7 @@ function Hero() {
         <div className="container-hero">
           <div className="left-right">
           <div className="hero-content">
+            <div className="top-section"></div>
             <div className="logo">
               <h2 className="logo-c">C</h2>
               <h2 className='logo-cook'>COOK<span className='logo-dot'>.</span><span className='logo-in'>i</span>N</h2>
